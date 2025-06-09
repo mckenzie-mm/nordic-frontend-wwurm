@@ -45,7 +45,8 @@ export default function ProductsList({
             <div className="grid-products">
             {productsDTO.map((productDTO, index) => 
               {
-                  return <Card productDTO={productDTO} key={index} />;
+                  return <Card productDTO={productDTO} key={index} />
+    
               }
                 )
             }

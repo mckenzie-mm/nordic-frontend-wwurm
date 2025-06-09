@@ -3,7 +3,8 @@ import { ICartItem } from "../DTO/cart";
 import { IProductDTO } from "../DTO/productDTO";
 
 export const toCartItem = (productDTO: IProductDTO, qty = 1) => {
-    if (!productDTO.id) {
+    if (productDTO.id === undefined) 
+    {
         return;
     }
     const cartItem : ICartItem = {

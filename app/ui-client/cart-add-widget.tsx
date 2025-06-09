@@ -7,6 +7,8 @@ import { toCartItem } from "../DTO-mappings/cart-item-mappings";
 import { store } from "../services/cart-service";
 import { IProductDTO } from "../DTO/productDTO";
 
+const { BUY_NOW } = require("../templates");
+
 export default function CartAdd({ productDTO } : { productDTO : IProductDTO}) {
     const [count, setCount ] = useState(1);
 
@@ -31,7 +33,7 @@ export default function CartAdd({ productDTO } : { productDTO : IProductDTO}) {
             <div className="product-quantity">
                 <InputNumber value={count} increment={increment} decrement={decrement} />
             </div>
-            <button className="product-buy-now" onClick={addItem}>Buy Now</button>
+            <button className="product-buy-now" onClick={addItem}>{BUY_NOW}</button>
         </>
     );
 }

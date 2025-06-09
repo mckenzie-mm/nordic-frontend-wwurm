@@ -12,6 +12,8 @@ export default function Card({ productDTO }: {
     const wwurmCategory = "all-produkte";
     const thb = HREF + wwurmCategory + "/" + encodeURIComponent(images[0]); 
     const src = HREF + wwurmCategory + "/" + encodeURIComponent(images[0]); 
+
+    console.log("price ", productDTO.price, "name ", productDTO.id, productDTO.name)
     return (
         <div className="card">    
              <div className="card-img-wrap" >
@@ -24,7 +26,9 @@ export default function Card({ productDTO }: {
             <div className="card-caption">
                 <ul className="card-detail-list">
                     <li key="card-link"><Link href="" className="card-link">{name}</Link></li>
-                    <li key="btn-buy"><BtnBuy productDTO={productDTO}/></li>                                    
+                    <li key="btn-buy"> 
+                        <BtnBuy productDTO={productDTO}/>
+                    </li>                                    
                 </ul>
                 <div className="card-like">
                     <BtnLike />

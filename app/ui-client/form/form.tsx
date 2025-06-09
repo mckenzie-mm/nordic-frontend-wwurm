@@ -58,12 +58,13 @@ export default function Form({ formDTO }: { formDTO: IFormDTO }) {
                 hidden
             />
 
-            { id && <input 
+            { id ? <input 
                         type="text" 
                         name="id" 
                         defaultValue={id} 
                         hidden
                     />
+                    : ""
             }
             <section className="section">
                 <div className="edit-product-header">

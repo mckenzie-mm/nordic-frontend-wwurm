@@ -59,7 +59,7 @@
 }
   
 .btn-buy:hover:before {
-    content:"Buy Now";
+    content:"Kaufen";
     padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
 }

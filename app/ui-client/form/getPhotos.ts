@@ -8,7 +8,7 @@ import {
 const client = new S3Client({
     region:AWS_REGION,
     credentials: fromCognitoIdentityPool({
-        identityPoolId: "eu-west-2:95647da0-9c5e-46aa-b3bc-28d82e38d901"
+        identityPoolId: "ap-southeast-2:1e2b4df4-a318-4cd2-9c19-753c83be052b"
     })
 });
 

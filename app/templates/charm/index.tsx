@@ -88,5 +88,7 @@ module.exports = {
   ADD_VOUCHER: "Add Voucher",
   SHIPMENT: "Shipment",
   SHIPMENT_PRICE_LOCAL: "Within Sydney & NSW (1–2 days)",
-  SHIPMENT_PRICE_NATIONAL: "Shipping throughout Australia"
+  SHIPMENT_PRICE_NATIONAL: "Shipping throughout Australia",
+  SIMILAR_PRODUCTS: "Similar Products",
+  BUY_NOW: "Buy now"
 }

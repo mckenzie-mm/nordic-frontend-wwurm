@@ -9,6 +9,8 @@ import ImageWidget from "@/app/ui-client/image-widget";
 import { IProductDTO } from "@/app/DTO/productDTO";
 import { Key } from "react";
 
+const { SIMILAR_PRODUCTS } = require("@/app/templates");
+
 export default async function Product({ params }: {params: Promise<{ slug: string }>}) {
     const { slug } = await params;
     const { productDTO, productsDTO } = await getProductPageData(slug);
@@ -78,7 +80,7 @@ export default async function Product({ params }: {params: Promise<{ slug: strin
                
             <div className="similar-products">
                 <section className="section">
-                    { productDTO && <h2 className="title-similar-products">Similar Products</h2> }
+                    { productDTO && <h2 className="title-similar-products">{SIMILAR_PRODUCTS}</h2> }
                     <div className="grid-products-similar" style={{marginBottom: "120px"}}>
                     {
                         productsDTO && productsDTO.map((productDTO: IProductDTO, index: Key | null | undefined) => 

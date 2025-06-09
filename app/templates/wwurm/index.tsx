@@ -34,7 +34,6 @@ module.exports = {
   PAYMENT: "",
   EXCHANGE: "", 
   COPYRIGHT: "", 
-  REGISTER: "",
   PRODUCTS_NAV_NAME: "Produkte",
   PRODUCTS_NAV_FIRST_NAME: "All Produkte",
   BRAND: "/wwurm/brand.svg",
@@ -42,7 +41,9 @@ module.exports = {
   SHIPPING_IMG: "/wwurm/about.jpg", 
   ABOUT_IMG: "/wwurm/about.jpg",
   CONTACT_IMG: "/wwurm/about.jpg",
-  CAROUSEL_IMG_ARR: [ '/wwurm/img-1.jpg', '/wwurm/img-2.jpg', '/wwurm/img-3.jpg'],
+  CAROUSEL_IMG_ARR: [ '/wwurm/img-1.jpg', '/wwurm/img-2.jpg', '/wwurm/img-3.jpg', 
+    '/wwurm/img-4.jpg', '/wwurm/img-5.jpg', '/wwurm/img-6.jpg',
+    '/wwurm/img-7.jpg', '/wwurm/img-8.jpg', '/wwurm/img-9.jpg'],
   LOGO: "/wwurm/logo.png",
   BRAND_WIDTH: "34%",
   BRAND_LEFT: "50%",
@@ -72,5 +73,9 @@ module.exports = {
   ADD_VOUCHER: "Gutschein hinzufü­gen",
   SHIPMENT: "Versand",
   SHIPMENT_PRICE_LOCAL: "Innerhalb Berlins & Deutschlands (1–2 Tage)",
-  SHIPMENT_PRICE_NATIONAL: "Versand Europaweit"
+  SHIPMENT_PRICE_NATIONAL: "Versand Europaweit",
+  SIMILAR_PRODUCTS: "Ähnliche Produkte",
+  BUY_NOW: "Kaufen",
+  REGISTER: "Anmelden",
+  SIGN_OUT: "Abmelden"
 }

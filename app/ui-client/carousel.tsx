@@ -39,7 +39,7 @@ export default function Carousel() {
       <ul className="marker-dots"> 
         {
           CAROUSEL_IMG_ARR.map((_: string, idx: number) => {
-            const state = (idx === count) ? "marker-active" : "";
+            const state = (idx === count) ? "marker-active" : "marker-inactive";
             return <li key={idx} className={state}><button>{idx}</button></li>;
           })
         }
