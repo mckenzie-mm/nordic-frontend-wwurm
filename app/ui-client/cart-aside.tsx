@@ -50,8 +50,7 @@ export default function CartAside() {
                     <ul className="cart-aside-items" role="list">
                     {
                         cart.map(({id, name, category, price, image, slug, qty}) => {           
-                            const wwurmCategory = "all-produkte";
-                            const src = HREF + wwurmCategory + "/" + encodeURIComponent(image);          
+                            const src = HREF + category + "/" + encodeURIComponent(image);          
                             // const src = HREF + category + "/" + encodeURIComponent(image); 
                             return ( 
                                 <li key={id} className="cart-aside-item">

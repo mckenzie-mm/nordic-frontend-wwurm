@@ -9,9 +9,8 @@ export default function Card({ productDTO }: {
     productDTO: IProductDTO;
 }) {
     const { name, images, slug, category } = productDTO;
-    const wwurmCategory = "all-produkte";
-    const thb = HREF + wwurmCategory + "/" + encodeURIComponent(images[0]); 
-    const src = HREF + wwurmCategory + "/" + encodeURIComponent(images[0]); 
+    const thb = HREF + category + "/" + encodeURIComponent(images[0]); 
+    const src = HREF + category + "/" + encodeURIComponent(images[0]); 
 
     console.log("price ", productDTO.price, "name ", productDTO.id, productDTO.name)
     return (

@@ -54,8 +54,7 @@ export default async function Page(props: { searchParams?: Promise<{ page?: stri
             }
             {
                 productsDTO.map(({ name, id, price, availability, slug, images, category }) => {
-                    const wwurmCategory = "all-produkte";
-                    const src = HREF + wwurmCategory + "/" + encodeURIComponent(images[0]);  
+                    const src = HREF + category + "/" + encodeURIComponent(images[0]);  
                     // const src = HREF + "thumbnails/" + category + "/" + encodeURIComponent(images[0]); 
                     let deleteProductWithId;
                     if (id) {

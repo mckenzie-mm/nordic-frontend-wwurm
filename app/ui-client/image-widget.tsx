@@ -17,8 +17,7 @@ export default function ImageWidget({ images, thumbs, category }: {
         {
             thumbs.map((thumb, index) => {
                 //  const src = HREF + "thumbnails/" + category + "/" + encodeURIComponent(thumb); 
-                const wwurmCategory = "all-produkte";
-                const src = HREF + wwurmCategory + "/" + encodeURIComponent(thumb); 
+                const src = HREF + category + "/" + encodeURIComponent(thumb); 
                 return ( 
                 <li key={index} className={`thumbnail ${(index === selected) ? "thumbnail-selected" : ""}`} >
                     <img 
@@ -34,8 +33,7 @@ export default function ImageWidget({ images, thumbs, category }: {
         <ul className="images-list" role="list">
             {
                 images.map((image, index) => {
-                    const wwurmCategory = "all-produkte";
-                    const src = HREF + wwurmCategory + "/" + encodeURIComponent(image); 
+                    const src = HREF + category + "/" + encodeURIComponent(image); 
                     //  const thb = HREF + "thumbnails/" + category! + "/" + encodeURIComponent(image); 
                     return  <li 
                                 key={index}

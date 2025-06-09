@@ -40,8 +40,7 @@ export default function Cart() {
                     {
                         cart.map(({id, name, category, price, image, slug, qty}) => 
                         {
-                            const wwurmCategory = "all-produkte";
-                            const src = HREF + wwurmCategory + "/" + encodeURIComponent(image); 
+                            const src = HREF + category + "/" + encodeURIComponent(image); 
                             // const src = HREF + category + "/" + encodeURIComponent(image); 
                             return  <li key={id} className="cart-item">
                                         <div className="cart-row">

@@ -22,14 +22,13 @@ export default function Form({ formDTO }: { formDTO: IFormDTO }) {
     const [selectedPhotos, setSelectedPhotos] = useState<Array<string>>(formDTO.images);
     const [categoryName, setCategoryName] = useState(formDTO.category); 
 
-    const wwurmCategory = "all-produkte"; 
 
     useEffect(() => {
         (async function(){
-            const photos = await getPhotos(wwurmCategory);
+            const photos = await getPhotos(categoryName!);
             setPhotos(photos);   
         })();
-    }, []);
+    }, [categoryName]);
 
     const handleSelect: ChangeEventHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         setCategoryName(e.target.value);  
@@ -100,7 +99,7 @@ export default function Form({ formDTO }: { formDTO: IFormDTO }) {
                             <ul className="bucket-image-widget-list" role="list">
                             {
                                 photos.map((photoKey) => {   
-                                    const photoUrl = HREF + wwurmCategory + "/" + encodeURIComponent(photoKey); 
+                                    const photoUrl = HREF + categoryName + "/" + encodeURIComponent(photoKey); 
                                     // const photoUrl = HREF + "thumbnails/" + categoryName + "/" + encodeURIComponent(photoKey);  
                                     return (
                                         <li key={photoKey} className="bucket-image-widget-li">
@@ -177,7 +176,7 @@ export default function Form({ formDTO }: { formDTO: IFormDTO }) {
                          <ul className="form-thumbnail-list" role="list">
                         {
                             selectedPhotos.map((thumb, index) => {
-                                const src = HREF + wwurmCategory + "/" + encodeURIComponent(thumb); 
+                                const src = HREF + categoryName + "/" + encodeURIComponent(thumb); 
                                 // const src = HREF + "thumbnails/" + categoryName + "/" + encodeURIComponent(thumb); 
                                 return ( 
                                  <li key={index} className="thumbnail" >
